@@ -77,3 +77,29 @@ function createTeamCards(array) {
 }
 
 createTeamCards(teamMembers);
+
+function renderTeam(array) {
+    teamContainer.innerHTML = '';
+
+    for (let i = 0; i < array.length; i++) {
+        createTeamCards(array[i]);
+    }
+}
+
+renderTeam(teamMembers);
+
+memberForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const newMember = {
+        name: nameInput.value.trim(),
+        role: roleInput.value.trim(),
+        email: emailInput.value.trim(),
+        img: imgInput.value.trim()
+    };
+
+    teamMembers.push(newMember);
+    createTeamCards(teamMembers);
+
+    memberForm.reset();
+});

@@ -50,8 +50,8 @@ h1 {
 }
 
 .member img {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
     display: block;
     flex-shrink: 0;
