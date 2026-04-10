@@ -35,22 +35,26 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    margin-bottom: 60px;
 }
 
 .member {
-    width: 430px;
     background-color: black;
     color: white;
     display: flex;
     align-items: center;
     text-align: left;
+    flex: 1 1 380px;
+    max-width: 420px;
+    min-width: 280px;
 }
 
 .member img {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     display: block;
+    flex-shrink: 0;
 }
 
 .member-info {
@@ -58,7 +62,7 @@ h1 {
 }
 
 .member-info h3 {
-    font-size: 30px;
+    font-size: 28px;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
@@ -70,4 +74,61 @@ h1 {
 
 .member-info .email {
     color: #33c7ff;
+}
+
+.form-section {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    color: #222;
+}
+
+#member-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#member-form input,
+#member-form button {
+    padding: 12px;
+    font-size: 16px;
+}
+
+#member-form button {
+    background-color: #e53170;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#member-form button:hover {
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .intro {
+        font-size: 18px;
+    }
+
+    .member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .member img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .member-info {
+        width: 100%;
+    }
 }

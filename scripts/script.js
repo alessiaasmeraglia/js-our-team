@@ -49,6 +49,12 @@ createTeamCards(teamMembers); */
 "use strict";
 
 const teamContainer = document.getElementById("team-container");
+const memberForm = document.getElementById('member-form');
+
+const nameInput = document.getElementById('name');
+const roleInput = document.getElementById('role');
+const emailInput = document.getElementById('email');
+const imgInput = document.getElementById('img');
 
 function createTeamCards(array) {
     for (let i = 0; i < array.length; i++) {
