@@ -47,8 +47,8 @@ h1 {
 }
 
 .member img {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
     display: block;
 }
