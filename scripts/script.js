@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict';
 
 //Seleziono gli elementi del DOM
 const teamContainer = document.getElementById('team-container');
@@ -38,10 +38,36 @@ function createTeamCards(array) {
         infoContainer.appendChild(email);
 
         card.appendChild(img);
-        card.appendChild(infoContainer);
+        card.appendChild(infoContainer); 
 
     }
 }
 
 //Chiamo la funzione per creare le card dei membri del team
+createTeamCards(teamMembers); */
+
+"use strict";
+
+const teamContainer = document.getElementById("team-container");
+
+function createTeamCards(array) {
+    for (let i = 0; i < array.length; i++) {
+        const member = array[i];
+
+        const card = document.createElement("div");
+        card.classList.add("member");
+
+        card.innerHTML = `
+        <img src="${member.img}" alt="${member.name}">
+        <div class="member-info">
+            <h3>${member.name}</h3>
+            <p>${member.role}</p>
+            <p class="email">${member.email}</p>
+        </div>
+    `;
+
+        teamContainer.appendChild(card);
+    }
+}
+
 createTeamCards(teamMembers);
