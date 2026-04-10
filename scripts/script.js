@@ -6,8 +6,7 @@ const teamContainer = document.getElementById('team-container');
 //Funzione per creare le card dei membri del team
 function createTeamCards(array) {
     
-    for( let i = 0; i < array.length; i++) {
-        const member = array[i];
+    for(const member of array) {
         const card = document.createElement('div');
         card.classList.add('member');
 
